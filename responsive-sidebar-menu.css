@@ -1,0 +1,116 @@
+@import url('https://fonts.googlepis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #150019;
+}
+
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #013682;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation:hover,
+.navigation.active {
+    width: 300px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #ea1d63;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: 0.3s;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: flex;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #013682;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: #ea1d63;
+    font-size: 24px;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+.toggle:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .navigation {
+        left: -60px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 100%;
+    }
+}
